@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.1] - 2023-07-26
+
+### <!-- 05 -->Documentation
+
+- Add badges and improve readability in README file
+
 ## [1.0.0-alpha.0] - 2023-07-26
 
 ### <!-- 01 -->Features
