@@ -1,6 +1,13 @@
 # Shell Action Template
 
-This repository provides a comprehensive template for creating GitHub Actions using Shell Scripts. It encapsulates best practices in scripting and interaction with the GitHub Actions environment.
+[![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/nekofar/shell-action-template?include_prereleases)](https://github.com/nekofar/shell-action-template/releases)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/nekofar/shell-action-template/prepare.yml)](https://github.com/nekofar/shell-action-template/actions/workflows/prepare.yml)
+[![GitHub](https://img.shields.io/github/license/nekofar/shell-action-template)](https://github.com/nekofar/shell-action-template/blob/master/LICENSE)
+[![Twitter Follow](https://img.shields.io/badge/follow-%40nekofar-1DA1F2?logo=twitter&style=flat)](https://twitter.com/nekofar)
+[![Donate](https://img.shields.io/badge/donate-nekofar.crypto-a2b9bc?logo=ko-fi&logoColor=white)](https://ud.me/nekofar.crypto)
+
+This repository provides a comprehensive template for creating GitHub Actions using Shell Scripts. It encapsulates best
+practices in scripting and interaction with the GitHub Actions environment.
 
 ## Features
 
@@ -15,7 +22,7 @@ This repository provides a comprehensive template for creating GitHub Actions us
 name: Greeting Workflow
 
 # Events that trigger the workflow
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 # Define a single job named 'greeting'
 jobs:
@@ -27,7 +34,7 @@ jobs:
       - name: Greet and Record Time  # Name for this step
         id: hello  # Unique identifier for the step to reference its outputs in other steps   
         uses: nekofar/shell-action-template@master  # Specifies the action to run as part of this step
-        with:  # Inputs for the 'uses' action
+        with: # Inputs for the 'uses' action
           who-to-greet: 'GitHub User'  # The 'who-to-greet' input for 'Hello World Action'
 
       - name: Get the output time  # Name for this step
@@ -36,7 +43,8 @@ jobs:
 
 ## Options
 
-The configuration used in the GitHub Action workflow includes several options for customization. Below is a description of these:
+The configuration used in the GitHub Action workflow includes several options for customization. Below is a description
+of these:
 
 | Option         | Description                                                                                          |
 |----------------|------------------------------------------------------------------------------------------------------|
