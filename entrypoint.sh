@@ -16,4 +16,4 @@ echo "Hello, $PERSON_TO_GREET!"
 TIME=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
 
 # Print the time
-echo "{time}={$TIME}" >> "$GITHUB_ENV"
+echo "time=${TIME}" >> "$GITHUB_OUTPUT"
