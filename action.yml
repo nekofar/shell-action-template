@@ -1,18 +1,27 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
+
+branding:
+  icon: terminal
+  color: gray-dark
+
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
+
 outputs:
   time: # id of output
-    value:
+    value: ${{ steps.greet.outputs.time }}
     description: 'The time we greeted you'
+
 runs:
   using: composite
   steps:
-    - run: ${{ github.action_path }}/entrypoint.sh
+    - name: Greet and Record Time  # name of step
+      id: greet
+      run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}

@@ -1,0 +1,21 @@
+# Name of the workflow
+name: Greeting Workflow
+
+# Events that trigger the workflow
+on: [ push, pull_request ]
+
+# Define a single job named 'greeting'
+jobs:
+  greeting:
+    # The type of machine that this job can run on
+    runs-on: ubuntu-latest
+    # List of steps this job will run
+    steps:
+      - name: Greet and Record Time  # Name for this step
+        id: hello  # Unique identifier for the step to reference its outputs in other steps
+        uses: nekofar/shell-action-template@develop  # Specifies the action to run as part of this step
+        with: # Inputs for the 'uses' action
+          who-to-greet: 'GitHub User'  # The 'who-to-greet' input for 'Hello World Action'
+
+      - name: Get the output time  # Name for this step
+        run: echo "The time was ${{ steps.hello.outputs.time }}"  # Display the 'time' output from 'hello' step
