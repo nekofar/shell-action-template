@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.2] - 2023-07-27
+
+### <!-- 02 -->Bug Fixes
+
+- Update syntax in time output in `entrypoint.sh`
+- Add branding and improve input description in `action.yml`
+- Update output value and additional parameters in `action.yml`
+
+### <!-- 04 -->Refactor
+
+- Update script behavior to aid debugging and improve error-handling
+
+### <!-- 07 -->Continuous Integrations
+
+- Add Greeting workflow in GitHub Actions
+- Add usage guard to GitHub Actions workflows
+- Update prepare workflow and enhance code quality
+
 ## [1.0.0-alpha.1] - 2023-07-26
 
 ### <!-- 05 -->Documentation
