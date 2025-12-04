@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.6] - 2025-12-04
+
+### Miscellaneous Tasks
+
+- Set Dependabot schedule to run daily at midnight UTC
+
 ## [1.0.0-alpha.5] - 2024-10-13
 
 ### Bug Fixes
